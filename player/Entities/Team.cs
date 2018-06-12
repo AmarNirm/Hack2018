@@ -32,7 +32,7 @@ namespace RoboCup
 
             m_coach = new Coach();
             //m_teamFormation = new Formation_4_4_2();
-            m_teamFormation = new NirFormation();
+            m_teamFormation = new EnglandFormation();
             m_playerList = m_teamFormation.InitTeam(this, m_coach);
         }
     }
