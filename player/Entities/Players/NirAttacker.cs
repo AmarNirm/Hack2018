@@ -26,13 +26,13 @@ namespace RoboCup
             // first move to start position
             m_robot.Turn(40);
             m_robot.Dash(100);
-
+            
             SeenObject obj;
 
             while (!m_timeOver)
             {
-                //m_robot.Turn(40);
-                m_robot.Dash(100);
+                if (m_number == FindPlayerClosestToTheBall())
+                    m_robot.Dash(100);
             }
         }
 
