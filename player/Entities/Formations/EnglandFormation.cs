@@ -12,8 +12,6 @@ namespace RoboCup
         {
             var players = new List<Player>();
             players.Add(new NirAttacker(team, coach));
-            players.Add(new NirAttacker(team, coach));
-
             return players;
         }
     }
