@@ -27,10 +27,13 @@ namespace RoboCup
             m_robot.Move(m_startPosition.X, m_startPosition.Y);
             SeenCoachObject ball = GetBall();
             SeenCoachObject currPlayer = GetCurrPlayer();
-            
+            m_robot.Turn(90);
+
             while (!m_timeOver)
             {
-
+                //ball = GetBall();
+                //currPlayer = GetCurrPlayer();
+                //m_robot.Turn(90);
                 //m_robot.Turn(40);
                 //m_robot.Dash(100);
             }

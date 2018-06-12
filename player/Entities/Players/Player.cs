@@ -52,37 +52,40 @@ namespace RoboCup
 
         protected SeenCoachObject GetBall()
         {
-            SeenCoachObject ball = null;
             while (!m_timeOver)
             {
-                ball = m_coach.GetSeenCoachObject("ball");
+                var ball = m_coach.GetSeenCoachObject("ball");
                 if (ball == null)
                 {
                     Console.WriteLine("ball == null");
                     continue;
                 }
-
-                Console.WriteLine($"ball: {ball.Pos.Value.X},{ball.Pos.Value.Y}");
+                else
+                {
+                    Console.WriteLine($"ball: {ball.Pos.Value.X},{ball.Pos.Value.Y}");
+                    return ball;
+                }
             }
-            return ball;
+            return null;
         }
 
         protected SeenCoachObject GetCurrPlayer()
         {
-            SeenCoachObject currPlayer = null;
             while (!m_timeOver)
             {
-                currPlayer = m_coach.GetSeenCoachObject($"player {m_team.m_teamName} {m_number}");
+                var currPlayer = m_coach.GetSeenCoachObject($"player {m_team.m_teamName} {m_number}");
                 if (currPlayer == null)
                 {
                     Console.WriteLine("currPlayer == null");
                     continue;
                 }
-
-                Console.WriteLine((string)currPlayer.Name);
+                else
+                {
+                    Console.WriteLine((string)currPlayer.Name);
+                    return currPlayer;
+                }
             }
-
-            return currPlayer;
+            return null;
         }
     }
 }
