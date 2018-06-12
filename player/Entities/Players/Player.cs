@@ -127,5 +127,43 @@ namespace RoboCup
         {
  
         }
+
+        protected SeenCoachObject GetBall()
+        {
+            while (!m_timeOver)
+            {
+                var ball = m_coach.GetSeenCoachObject("ball");
+                if (ball == null)
+                {
+                    Console.WriteLine("ball == null");
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine($"ball: {ball.Pos.Value.X},{ball.Pos.Value.Y}");
+                    return ball;
+                }
+            }
+            return null;
+        }
+
+        protected SeenCoachObject GetCurrPlayer()
+        {
+            while (!m_timeOver)
+            {
+                var currPlayer = m_coach.GetSeenCoachObject($"player {m_team.m_teamName} {m_number}");
+                if (currPlayer == null)
+                {
+                    Console.WriteLine("currPlayer == null");
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine((string)currPlayer.Name);
+                    return currPlayer;
+                }
+            }
+            return null;
+        }
     }
 }

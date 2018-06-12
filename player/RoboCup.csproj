@@ -68,7 +68,7 @@
     <Compile Include="Entities\Coach.cs" />
     <Compile Include="Entities\Formations\Formation_4_4_2.cs" />
     <Compile Include="Entities\Formations\IFormation.cs" />
-    <Compile Include="Entities\Formations\NirFormation.cs" />
+    <Compile Include="Entities\Formations\EnglandFormation.cs" />
     <Compile Include="Entities\ICoach.cs" />
     <Compile Include="Entities\Players\Defenders\CentralDefender.cs" />
     <Compile Include="Entities\Players\Defenders\CentralDefenderLeft.cs" />
