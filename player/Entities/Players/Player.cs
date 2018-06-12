@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Threading;
 using RoboCup;
 using RoboCup.Entities;
+using RoboCup.Infrastructure;
 
 namespace RoboCup
 {
@@ -47,6 +48,41 @@ namespace RoboCup
         public virtual  void play()
         {
  
+        }
+
+        protected SeenCoachObject GetBall()
+        {
+            SeenCoachObject ball = null;
+            while (!m_timeOver)
+            {
+                ball = m_coach.GetSeenCoachObject("ball");
+                if (ball == null)
+                {
+                    Console.WriteLine("ball == null");
+                    continue;
+                }
+
+                Console.WriteLine($"ball: {ball.Pos.Value.X},{ball.Pos.Value.Y}");
+            }
+            return ball;
+        }
+
+        protected SeenCoachObject GetCurrPlayer()
+        {
+            SeenCoachObject currPlayer = null;
+            while (!m_timeOver)
+            {
+                currPlayer = m_coach.GetSeenCoachObject($"player {m_team.m_teamName} {m_number}");
+                if (currPlayer == null)
+                {
+                    Console.WriteLine("currPlayer == null");
+                    continue;
+                }
+
+                Console.WriteLine((string)currPlayer.Name);
+            }
+
+            return currPlayer;
         }
     }
 }

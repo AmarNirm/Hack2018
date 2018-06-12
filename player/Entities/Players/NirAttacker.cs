@@ -24,15 +24,15 @@ namespace RoboCup
         {
 
             // first move to start position
-            m_robot.Turn(40);
-            m_robot.Dash(100);
-
-            SeenObject obj;
-
+            m_robot.Move(m_startPosition.X, m_startPosition.Y);
+            SeenCoachObject ball = GetBall();
+            SeenCoachObject currPlayer = GetCurrPlayer();
+            
             while (!m_timeOver)
             {
+
                 //m_robot.Turn(40);
-                m_robot.Dash(100);
+                //m_robot.Dash(100);
             }
         }
 
