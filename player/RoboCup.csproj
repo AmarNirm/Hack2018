@@ -98,8 +98,10 @@
     <Compile Include="Entities\Team.cs" />
     <Compile Include="Infrastructure\FieldLocations.cs" />
     <Compile Include="Infrastructure\FlagNameToPointF.cs" />
+    <Compile Include="Infrastructure\Position.cs" />
     <Compile Include="Infrastructure\SeenCoachObject.cs" />
     <Compile Include="Infrastructure\SeenObject.cs" />
+    <Compile Include="Infrastructure\Utils.cs" />
     <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="Interfaces\ISensorInput.cs" />
     <Compile Include="Memory.cs" />
