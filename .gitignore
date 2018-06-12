@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/player/v15
+/.vs/player/DesignTimeBuild
+/player/bin
+/player/obj/x86
